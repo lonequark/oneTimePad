@@ -11,6 +11,6 @@ Encryption scheme:
 
 3. Add together the trimmed ASCII decimal numbers (possible sums 0-186)
 
-4. Take trimmed sum (mod 94), just like in normal one-time-pads but with a longer list of available characters. (possible results -93)
+4. Take trimmed sum (mod 94), just like in normal one-time-pads but with a longer list of available characters. (possible results 0-93)
 
 5. Untrim the resulting number by adding 33, to put it back in the range of desired characters (33-126).
