@@ -15,7 +15,7 @@ import random
 import os
 
 # Specify which ascii decimal values are acceptable. Exclude spaces.
-accept = range(33, 127)
+accept = range(32, 127)
 
 # Function for converting string to ASCII while removing specified unacceptable characters
 def stringToASCII(string, accept):
@@ -63,7 +63,7 @@ def encrypt():
 	cipherASCII = []
 
 	for i in range(0,len(plainASCII)):
-		encrypted = ( ( (plainASCII[i] - 33) + (key[i] - 33) ) % 94) + 33 # Note: See README for math here.
+		encrypted = ( ( (plainASCII[i] - 32) + (key[i] - 32) ) % 95) + 32 # Note: See README for math here.
 		cipherASCII.append(encrypted)
 
 
@@ -113,7 +113,7 @@ def decrypt():
 	plainASCII = []
 
 	for i in range(0,len(cipherASCII)):
-		decrypted = ( ( (cipherASCII[i] - 33) - (keyASCII[i] - 33) ) % 94) + 33 # Note: See README for math here.
+		decrypted = ( ( (cipherASCII[i] - 32) - (keyASCII[i] - 32) ) % 95) + 32 # Note: See README for math here.
 		plainASCII.append(decrypted)
 
 
